@@ -16,10 +16,12 @@ apply from: '../build.common.gradle'
 
 repositories {
     maven { url = "https://dl.bintray.com/first-tech-challenge/ftcsdk/" }
+    mavenCentral()
 }
 
 dependencies {
     annotationProcessor files('lib/OpModeAnnotationProcessor.jar')
+    implementation "org.ejml:ejml-simple:0.40"
 }
 
 android {
