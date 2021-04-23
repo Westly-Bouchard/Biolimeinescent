@@ -1,12 +1,12 @@
 package org.firstinspires.ftc.teamcode.commands.actions;
 
 import org.firstinspires.ftc.teamcode.commands.basecommands.Command;
-import org.firstinspires.ftc.teamcode.mechanisms.DriveTrain;
+import org.firstinspires.ftc.teamcode.mechanisms.OdometryDriveTrain;
 import org.firstinspires.ftc.teamcode.mechanisms.mechanismhandlers.MechanismEngine;
 
 public class ResetOdometry extends Command {
 
-    private DriveTrain driveTrain = MechanismEngine.getInstance().getMechanism(DriveTrain.class);
+    private OdometryDriveTrain driveTrain = MechanismEngine.getInstance().getMechanism(OdometryDriveTrain.class);
 
     private double x, z, a;
 
@@ -19,8 +19,8 @@ public class ResetOdometry extends Command {
     public void initialize() {}
 
     public void execute() {
-        driveTrain.setXZ(x, z);
         driveTrain.setTrueHeading(a);
+        driveTrain.setXZ(x, z);
     }
 
     public boolean isFinished() {

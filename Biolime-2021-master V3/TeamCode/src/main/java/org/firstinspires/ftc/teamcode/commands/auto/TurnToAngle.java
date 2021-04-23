@@ -4,12 +4,12 @@ import org.firstinspires.ftc.teamcode.commands.basecommands.Command;
 import org.firstinspires.ftc.teamcode.framework.Constants;
 import org.firstinspires.ftc.teamcode.framework.PIDHandler;
 import org.firstinspires.ftc.teamcode.framework.util.Timekeeper;
-import org.firstinspires.ftc.teamcode.mechanisms.DriveTrain;
+import org.firstinspires.ftc.teamcode.mechanisms.OdometryDriveTrain;
 import org.firstinspires.ftc.teamcode.mechanisms.mechanismhandlers.MechanismEngine;
 
 public class TurnToAngle extends Command {
 
-    private DriveTrain driveTrain = MechanismEngine.getInstance().getMechanism(DriveTrain.class);
+    private OdometryDriveTrain driveTrain = MechanismEngine.getInstance().getMechanism(OdometryDriveTrain.class);
     private PIDHandler pid = new PIDHandler(Constants.kAngleP, Constants.kAngleI, Constants.kAngleD);
     private double targetAngle, angleError;
     private Timekeeper timekeeper;

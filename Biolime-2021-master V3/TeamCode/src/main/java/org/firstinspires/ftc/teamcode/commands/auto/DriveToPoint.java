@@ -3,13 +3,13 @@ package org.firstinspires.ftc.teamcode.commands.auto;
 import org.firstinspires.ftc.teamcode.commands.basecommands.Command;
 import org.firstinspires.ftc.teamcode.framework.PIDHandler;
 import org.firstinspires.ftc.teamcode.framework.util.Timekeeper;
-import org.firstinspires.ftc.teamcode.mechanisms.DriveTrain;
+import org.firstinspires.ftc.teamcode.mechanisms.OdometryDriveTrain;
 import org.firstinspires.ftc.teamcode.mechanisms.mechanismhandlers.MechanismEngine;
 import org.firstinspires.ftc.teamcode.framework.Constants;
 
 public class DriveToPoint extends Command {
 
-    private DriveTrain driveTrain = MechanismEngine.getInstance().getMechanism(DriveTrain.class);
+    private OdometryDriveTrain driveTrain = MechanismEngine.getInstance().getMechanism(OdometryDriveTrain.class);
     private PIDHandler angle_PID = new PIDHandler(Constants.kAngleP, Constants.kAngleI, Constants.kAngleD);
     private PIDHandler offset_PID = new PIDHandler(Constants.x_offset_kP, Constants.x_offset_kI, Constants.x_offset_kD);
     private PIDHandler distance_PID = new PIDHandler(Constants.kDistanceP, Constants.kDistanceI, Constants.kDistanceD);

@@ -6,7 +6,7 @@ import org.firstinspires.ftc.teamcode.framework.controllers.Axis;
 import org.firstinspires.ftc.teamcode.framework.controllers.Button;
 import org.firstinspires.ftc.teamcode.framework.util.TelemetryHandler;
 import org.firstinspires.ftc.teamcode.framework.util.Timekeeper;
-import org.firstinspires.ftc.teamcode.mechanisms.DriveTrain;
+import org.firstinspires.ftc.teamcode.mechanisms.OdometryDriveTrain;
 import org.firstinspires.ftc.teamcode.mechanisms.mechanismhandlers.MechanismEngine;
 import org.firstinspires.ftc.teamcode.framework.Constants;
 
@@ -14,7 +14,7 @@ import java.lang.Math;
 
 public class Drive extends Command {
 
-    private DriveTrain driveTrain = MechanismEngine.getInstance().getMechanism(DriveTrain.class);
+    private OdometryDriveTrain driveTrain = MechanismEngine.getInstance().getMechanism(OdometryDriveTrain.class);
 
     private Axis leftX, leftY, rightX;
     private Button RB;

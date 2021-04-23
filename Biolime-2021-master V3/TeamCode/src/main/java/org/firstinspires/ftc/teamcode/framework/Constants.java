@@ -57,11 +57,17 @@ public class Constants {
     //IsFinished thresholds:
     public static final double kAngleFinishedThreshold = 1;
     public static final double kDistanceFinishedThreshold = 1;
+    public static final double kStrafeFinishedThreashold = 1;
 
     //Distance PID Values:
     public static final double kDistanceP = 0.1;
     public static final double kDistanceI = 0;
     public static final double kDistanceD = 0;
+
+    //Strafe PID Values:
+    public static final double kStrafeP = 0;
+    public static final double kStrafeI = 0;
+    public static final double kStrafeD = 0;
 
     //Offset PID Values:
     public static final double x_offset_kP = 0.04;
